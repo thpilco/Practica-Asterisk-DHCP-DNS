@@ -6,14 +6,18 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
+include "/etc/bind/ddns.key";
+
 zone "cotillas.es" {
 	type master;
 	file "/etc/bind/db.cotillas.es";
-	allow-update { key rndc-key; };
+	allow-update { key DDNS_UPDATE; };
+	notify no;
 };
 
 zone "34.210.in-addr.arpa" {
 	type master;
 	file "/etc/bind/db.210.34";
-	allow-update { key rndc-key; };
+	allow-update { key DDNS_UPDATE; };
+	notify no;
 };
