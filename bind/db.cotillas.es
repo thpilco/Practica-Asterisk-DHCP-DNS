@@ -14,4 +14,6 @@ $TTL	86400
 @	IN	NS	ns1.cotillas.es.
 @	IN	NS	ns2.cotillas.es.
 ns1	IN	A	210.34.2.2
+ns1			AAAA	2002:CAFE:FE0::2
 ns2	IN	A	210.34.3.2
+ns2			AAAA	2002:CAFE:FE0:2::2
