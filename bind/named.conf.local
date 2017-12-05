@@ -1,0 +1,25 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "cotillas.es" {
+	type slave;
+	file "db.cotillas.es";
+	masters { 210.34.2.2; };
+};
+
+zone "34.210.in-addr.arpa" {
+	type slave;
+	masters { 210.34.2.2; };
+	file "db.210.24";
+};
+
+zone "0.e.f.0.e.f.a.c.2.0.0.2.ip6.arpa" {
+	type slave;
+	masters { 210.34.2.2; };
+	file "db.2002.cafe.fe0";
+};
