@@ -21,3 +21,10 @@ zone "34.210.in-addr.arpa" {
 	allow-update { key DDNS_UPDATE; };
 	notify no;
 };
+
+zone "0.e.f.0.e.f.a.c.2.0.0.2.ip6.arpa" {
+	type master;
+	file "/etc/bind/db.2002.cafe.fe0";
+	allow-update { key DDNS_UPDATE; };
+	notify no;
+};
