@@ -1,0 +1,12 @@
+[Unit]
+Description=Festival TTS
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/festival --server
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
