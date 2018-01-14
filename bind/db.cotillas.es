@@ -17,3 +17,8 @@ ns1	IN	A	210.34.2.2
 ns1			AAAA	2002:CAFE:FE0::2
 ns2	IN	A	210.34.3.2
 ns2			AAAA	2002:CAFE:FE0:2::2
+asterisk	IN	A	210.34.2.5
+asterisk			AAAA	2002:CAFE:FE0::5
+asterisk-madrid	IN	A	210.34.0.5
+asterisk-madrid			AAAA	2002:CAFE:FE0:1::5
+
