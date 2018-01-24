@@ -21,4 +21,4 @@ asterisk	IN	A	210.34.2.5
 asterisk			AAAA	2002:CAFE:FE0::5
 asterisk-madrid	IN	A	210.34.0.5
 asterisk-madrid			AAAA	2002:CAFE:FE0:1::5
-
+@	IN	MX	10	ns1.cotillas.es.
