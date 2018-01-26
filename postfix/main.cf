@@ -45,3 +45,5 @@ recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
 home_mailbox = Maildir/
+content_filter = amavis:[127.0.0.1]:10024
+receive_override_options = no_address_mappings
