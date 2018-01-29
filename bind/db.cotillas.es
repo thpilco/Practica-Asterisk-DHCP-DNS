@@ -13,6 +13,7 @@ $TTL	86400
 ;
 @	IN	NS	ns1.cotillas.es.
 @	IN	NS	ns2.cotillas.es.
+@	IN	MX	10	ns1.cotillas.es.
 ns1	IN	A	210.34.2.2
 ns1			AAAA	2002:CAFE:FE0::2
 ns2	IN	A	210.34.3.2
@@ -21,4 +22,4 @@ asterisk	IN	A	210.34.2.5
 asterisk			AAAA	2002:CAFE:FE0::5
 asterisk-madrid	IN	A	210.34.0.5
 asterisk-madrid			AAAA	2002:CAFE:FE0:1::5
-@	IN	MX	10	ns1.cotillas.es.
+lists	IN	A	210.34.2.2
