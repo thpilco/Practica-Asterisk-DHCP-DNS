@@ -1,0 +1,8 @@
+server_host = ldap://asterisk.cotillas.es:389
+search_base = ou=users,dc=cotillas,dc=es
+query_filter = (mail=%s)
+result_attribute = mailboxDir
+bind = yes
+bind_dn = cn=admin,dc=cotillas,dc=es
+bind_pw = departamento
+#debuglevel = 1
