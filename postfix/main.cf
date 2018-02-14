@@ -39,25 +39,24 @@ inet_protocols = all
 myhostname = ns1.cotillas.es
 mydomain = cotillas.es
 myorigin = $mydomain
-mydestination = localhost
+#mydestination = $mydomain, $myhostname, localhost.$mydomain, localhost
+mydestination = localhost.$mydomain, localhost
 relayhost = 
-mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 210.34.0.0/16
-
-#alias_maps = hash:/etc/aliases, ldap:/etc/postfix/ldap-aliases.cf, hash:/var/lib/mailman/data/aliases
-#alias_database = hash:/etc/aliases, ldap:/etc/postfix/ldap-aliases.cf, hash:/var/lib/mailman/data/aliases
-#alias_recipient_maps = hash:/etc/aliases, ldap:/etc/postfix/ldap-aliases.cf, hash:/var/lib/mailman/data/aliases
+mynetworks = 127.0.0.0/8 [::1]/128 210.34.0.0/16 [2002:CAFE:FE0::]/48
 
 mail_spool_directory = /home/mail/
 mailbox_size_limit = 0
 recipient_delimiter = +
+unkown_local_recipient_reject_code = 550
 
 content_filter = amavis:[127.0.0.1]:10024
 receive_override_options = no_address_mappings
 
 virtual_mailbox_domains = cotillas.es
 virtual_mailbox_maps = ldap:/etc/postfix/ldap-aliases.cf
+virtual_alias_maps = hash:/var/lib/mailman/data/virtual-mailman
 virtual_mailbox_base = /home/mail/
 virtual_minimun_uid = 100
-virtual_uid_maps = static:10000
+virtual_uid_maps = static:113
 virtual_gid_maps = static:113
-virtual_alias_maps = hash:/etc/aliases
+alias_maps = hash:/var/lib/mailman/data/aliases, hash:/etc/aliases
